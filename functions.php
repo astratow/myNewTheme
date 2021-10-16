@@ -15,4 +15,7 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 		register_nav_menus( array(
     	'primary' => __( 'Primary Menu', 'THEMENAME' ),
 	));
-	}
+  }
+function load_css(){
+  wp_register_style('')
+?>
