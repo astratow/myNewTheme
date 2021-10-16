@@ -13,5 +13,5 @@ if ( is_home() && ! is_front_page() && ! empty( single_post_title( '', false ) )
 function() {
   echo '<h1>This is myNewTheme.</h1>';
 }
-
+	
 ?>
