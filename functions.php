@@ -23,6 +23,8 @@ function load_css(){
      *array()
      * */
     wp_enqueue_style('bootstrap');
+    wp_register_style('main', get_template_directory_uri() . '/css/main.min.css', array(), false /*version*/, 'all'); 
+    wp_enqueue_style('main');
 }
 add_action('wp_enqueue_scripts', 'load_css');
 
