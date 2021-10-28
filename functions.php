@@ -16,6 +16,8 @@ add_action( 'after_setup_theme', 'register_navwalker' );
     	'primary' => __( 'Primary Menu', 'THEMENAME' ),
 	));
   }
+
+  //load stylesheets
 function load_css(){
   wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false /*version*/, 'all'); 
     /*get_template_directory() 
@@ -28,7 +30,7 @@ function load_css(){
 }
 add_action('wp_enqueue_scripts', 'load_css');
 
-
+// load jQuery
 function load_js(){
   wp_enqueue_script('jquery');
   wp_register_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery', false, true);
@@ -36,4 +38,17 @@ function load_js(){
 }
 add_action('wp_enqueue_scripts', 'load_js');
     
+
+//theme support
+add_theme_support('menus');
+
+//menus
+register_nav_menus(
+
+  array(
+
+      'top-menu' => 'Top Menu Location',
+      'mobile-menu' => 'Mobile Menu Location',
+    )
+  )
 ?>
