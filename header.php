@@ -6,8 +6,12 @@
 <html>
 	<head>
     <meta charset="UTF-8"
-    <title>myNewTheme</title> 
+    <title>myNewTheme</title>
+
 		<?php wp_head(); ?>
 		
 	</head>
 <body>
+	<header>
+		
+	</header>
